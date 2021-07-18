@@ -1,0 +1,7 @@
+FROM python:3
+ADD StockMarketApp.py /
+#RUN sudo apt-get install python
+RUN pip install --upgrade pip && \
+    pip install pandas \
+    pip install numpy
+CMD ["python","./StockMarket.py"]
